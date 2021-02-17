@@ -1,4 +1,9 @@
+body{margin: 0;
+     text-align: center;
+}
+
 .navbar{padding-top: 10px;
+
 }
 .navbar-link:focus, .navbar-link:hover{
   background: #3071a9;
@@ -19,7 +24,6 @@ background-color: darken(#d9534f,20%) !important;
 
 }
 
-
 .btn-primary:visited, .btn-danger:visited {
     color: #fff;
 }
@@ -28,3 +32,50 @@ background-color: darken(#d9534f,20%) !important;
         padding-top: 20px;
         height: 70%;
 }
+
+.section1{background-color: #f1f3f8;
+          width: 100%;
+          padding-top: 20px;
+          margin-top: 0px;
+
+}
+#header{background-color: #f1f3f8;
+        margin-top: 5px;
+
+}
+.bottom-container{background-color:#66BFBF;
+                  position: absolute;
+                  width: 100%;
+        }
+.footer-link{margin: auto 10px auto 10px;
+                     text-decoration: none;
+                     color: #11999E;
+                     line-height: 2;
+   }
+   .contact-me{width: 50%;
+              margin: 100px auto 100px auto;
+              line-height: 2;
+
+   }
+   .skill-row{
+     width: 50%;
+     margin: 100px auto 100px auto;
+
+     line-height: 2;
+
+   }
+   hr{border: dotted brown 6px;
+     border-bottom: none;
+     width: 7%;
+     margin: 50px auto;
+   }
+   .manu-image__img{
+     float: left;
+     border-radius: 50%;
+     width: 20rem;
+   }
+   .auto-image__img{
+     border-radius: 50%;
+     width: 20rem;
+     float: right;
+   }
