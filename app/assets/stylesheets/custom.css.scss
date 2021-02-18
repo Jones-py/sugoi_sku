@@ -1,8 +1,8 @@
-body{margin: 0;
-     text-align: center;
-}
+
 
 .navbar{padding-top: 10px;
+        background-color: #28abb9;
+        color: #fff;
 
 }
 .navbar-link:focus, .navbar-link:hover{
@@ -31,43 +31,51 @@ background-color: darken(#d9534f,20%) !important;
 .driving-image__img{width: 80%;
         padding-top: 20px;
         height: 70%;
+        text-align: center;
 }
 
-.section1{background-color: #f1f3f8;
-          width: 100%;
-          padding-top: 20px;
-          margin-top: 0px;
 
-}
-#header{background-color: #f1f3f8;
-        margin-top: 5px;
 
-}
+
+
 .bottom-container{background-color:#66BFBF;
                   position: absolute;
                   width: 100%;
+                  text-align: center;
+
         }
 .footer-link{margin: auto 10px auto 10px;
                      text-decoration: none;
                      color: #11999E;
                      line-height: 2;
+                     text-align: center;
    }
-   .contact-me{width: 50%;
-              margin: 100px auto 100px auto;
+   .Contact-Us{width: 50%;
               line-height: 2;
+              text-align: center;
+              margin-left: 25%;
 
+              padding-bottom: 20px;
    }
    .skill-row{
      width: 50%;
      margin: 100px auto 100px auto;
-
+     text-align: center;
      line-height: 2;
+
+   }
+
+   .skills{text-align: center;
 
    }
    hr{border: dotted brown 6px;
      border-bottom: none;
      width: 7%;
      margin: 50px auto;
+   }
+   .driving-image__img{
+     border-radius: 50%;
+     
    }
    .manu-image__img{
      float: left;
@@ -78,4 +86,9 @@ background-color: darken(#d9534f,20%) !important;
      border-radius: 50%;
      width: 20rem;
      float: right;
+   }
+   .para1{ width: 40rem;
+   border-radius: 50%;
+   margin-left: 38%;
+
    }
