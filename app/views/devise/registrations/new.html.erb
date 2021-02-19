@@ -3,40 +3,43 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= bootstrap_devise_error_messages! %>
 
-  <div class="form-group">
-    <%= f.label :name %>
-    <%= f.name_field :name,  class: 'form-control' %>
+  <div class="field">
+    <%= f.label :first_name%>
+    <%= f.text_field :first_name  %>
   </div>
-
-  <div class="form-group">
+  <div class="field">
+    <%= f.label :last_name%>
+    <%= f.text_field :last_name  %>
+  </div>
+  <div class="field">
     <%= f.label :gender %>
-    <%= f.gender_field :gender, autofocus: true, autocomplete: 'gender', class: 'form-control' %>
+    <%= f.text_field :gender, autofocus: true, autocomplete: 'gender'%>
   </div>
-  <div class="form-group">
+  <div class="field">
     <%= f.label :DOB %>
-    <%= f.DOB_field :DOB, autofocus: true, autocomplete: 'DOB', class: 'form-control' %>
+    <%= f.text_field :DOB, autofocus: true, autocomplete: 'DOB' %>
   </div>
 
-  <div class="form-group">
+  <div class="field">
     <%= f.label :email %>
-    <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control' %>
+    <%= f.email_field :email, autofocus: true, autocomplete: 'email'%>
   </div>
 
-  <div class="form-group">
+  <div class="field">
     <%= f.label :password %>
-    <%= f.password_field :password, autocomplete: 'current-password', class: 'form-control' %>
+    <%= f.password_field :password, autocomplete: 'current-password' %>
 
     <% if @minimum_password_length %>
       <small class="form-text text-muted"><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></small>
     <% end %>
   </div>
 
-  <div class="form-group">
+  <div class="field">
     <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, autocomplete: 'current-password', class: 'form-control' %>
+    <%= f.password_field :password_confirmation, autocomplete: 'current-password' %>
   </div>
 
-  <div class="form-group">
+  <div class="field">
     <%= f.submit t('.sign_up'), class: 'btn btn-primary' %>
   </div>
 <% end %>
