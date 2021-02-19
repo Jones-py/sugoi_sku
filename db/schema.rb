@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_18_082245) do
+ActiveRecord::Schema.define(version: 2021_02_19_082548) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2021_02_18_082245) do
   create_table "courses", force: :cascade do |t|
     t.string "name"
     t.string "category"
+    t.text "description"
     t.date "start_date"
     t.date "course_ends"
     t.string "course_period"
@@ -49,6 +50,9 @@ ActiveRecord::Schema.define(version: 2021_02_18_082245) do
     t.string "unconfirmed_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "gender"
+    t.string "name"
+    t.string "DOB"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
