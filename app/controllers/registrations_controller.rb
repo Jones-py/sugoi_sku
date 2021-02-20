@@ -1,5 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
-
+ load_and_authorize_resource
 private
 
   def sign_up_params
