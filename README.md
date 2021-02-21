@@ -9,7 +9,12 @@
 ## ER Daigram
 <img src="pictures/ERsugoi.png">
 
+## Transitioning Screen
+<img src="pictures/transcreen.png" width="800">
 
+## Wireframe
+
+[Wireframe Link](https://docs.google.com/document/d/1uNSxoU56xIbRztiEP1dTLvfPA4ptXC51bslguBddIP8/edit)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
