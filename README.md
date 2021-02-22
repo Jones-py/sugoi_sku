@@ -39,6 +39,7 @@ Rails 5.2.1
 ## ER Daigram
 <img src="pictures/ERsugoi.png">
 
+<<<<<<< HEAD
 ## Version
   Ruby 2.6.5
   Rails 5.2.1
@@ -48,3 +49,34 @@ Rails 5.2.1
   * mini_magick
   * devise
   * gem rails_admin
+=======
+## Transitioning Screen
+<img src="pictures/transcreen.png" width="800">
+
+## Wireframe
+
+[Wireframe Link](https://docs.google.com/document/d/1uNSxoU56xIbRztiEP1dTLvfPA4ptXC51bslguBddIP8/edit)
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+>>>>>>> f9c50c1f419ea36ef6918d022d4eddf8346ae6c3
