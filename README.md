@@ -27,6 +27,8 @@ Simple dynamic web app
 - [ ] Course application function
   - [ ] users can apply for a course
   - [ ] Admin can approve applications
+- [ ] Comment post function
+    - [ ] users can post comments for clarifications on courses
 - [ ] Admin functions
   - [ ] Only admin can add both instructor and user accounts
 
@@ -50,3 +52,4 @@ Simple dynamic web app
   * mini_magick
   * devise
   * gem rails_admin
+  * gem 'semantic-ui-sass', '~> 0.15.4.2'
