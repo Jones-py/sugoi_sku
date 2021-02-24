@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
   load_and_authorize_resource
-  
+
   def index
     @courses=Course.all
   end
@@ -43,6 +43,6 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    params.require(:course).permit(:name,:category,:description,:start_date,:course_ends,:course_period,:user_id, :id)
+    params.require(:course).permit(:name,:category,:description,:course_period,:user_id, :id)
   end
 end

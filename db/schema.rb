@@ -16,12 +16,6 @@ ActiveRecord::Schema.define(version: 2021_02_20_155749) do
   enable_extension "plpgsql"
 
   create_table "course_applications", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.date "DOB"
-    t.string "gender"
-    t.integer "mobile_number"
-    t.string "course_category"
     t.string "payment_method"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -31,8 +25,6 @@ ActiveRecord::Schema.define(version: 2021_02_20_155749) do
     t.string "name"
     t.string "category"
     t.text "description"
-    t.date "start_date"
-    t.date "course_ends"
     t.string "course_period"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -54,6 +46,7 @@ ActiveRecord::Schema.define(version: 2021_02_20_155749) do
     t.string "first_name"
     t.string "last_name"
     t.date "DOB"
+    t.integer "mobile_number"
     t.boolean "superadmin_role", default: false
     t.boolean "instructor_role", default: false
     t.boolean "user_role", default: true

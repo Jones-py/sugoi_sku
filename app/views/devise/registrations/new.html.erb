@@ -1,47 +1,61 @@
-<h1><%= t('.sign_up') %></h1>
+<div class="container">
+  <div class="sign">
+  <h4><%= t('.sign_up') %></h4>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= bootstrap_devise_error_messages! %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= bootstrap_devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :first_name%>
-    <%= f.text_field :first_name  %>
-  </div>
-  <div class="field">
-    <%= f.label :last_name%>
-    <%= f.text_field :last_name  %>
-  </div>
-  <div class="field">
-    <%= f.label :gender %>
-    <%= f.text_field :gender, autofocus: true, autocomplete: 'gender'%>
-  </div>
-  <div class="field">
-    <%= f.label :DOB %>
-    <%= f.text_field :DOB, autofocus: true, autocomplete: 'DOB' %>
-  </div>
+    <div class="field">
+      <%= f.label :first_name%>
+      <%= f.text_field :first_name, placeholder:"first name",class: 'form-control' %>
+    </div>
+    <div class="field">
+      <%= f.label :last_name%>
+      <%= f.text_field :last_name, placeholder:"last name", class: 'form-control'  %>
+    </div>
+    <br>
+    <div class="field">
+      <%= f.label :gender %>
+      <%= f.select :gender, ['gender','Male', 'Female'],class: 'form-control'%>
+    </div>
+    <div class="field">
+      <%= f.label :DOB %>
+      <div class ='input-group date datepicker'>
+       <%= f.text_field :DOB, "data-provide" => 'datepicker', class: 'form-control'%>
+       <span class = "input-group-addon">
+           <span class = "fa fa-calendar"></span>
+       </span>
+      </div>
+    </div>
+    <div class="field">
+      <%= f.label :mobile_number %>
+      <%= f.text_field :mobile_number, placeholder:"mobile number", class: 'form-control'%>
+    </div>
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.email_field :email, placeholder:"email",autofocus: true, autocomplete: 'email', class: 'form-control'%>
+    </div>
 
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.email_field :email, autofocus: true, autocomplete: 'email'%>
-  </div>
+    <div class="field">
+      <%= f.label :password %>
+      <%= f.password_field :password, autocomplete: 'current-password' ,class: 'form-control'%>
 
-  <div class="field">
-    <%= f.label :password %>
-    <%= f.password_field :password, autocomplete: 'current-password' %>
+      <% if @minimum_password_length %>
+        <small class="form-text text-muted"><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></small>
+      <% end %>
+    </div>
 
-    <% if @minimum_password_length %>
-      <small class="form-text text-muted"><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></small>
-    <% end %>
-  </div>
+    <div class="field">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, autocomplete: 'current-password',class: 'form-control'%>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, autocomplete: 'current-password' %>
-  </div>
+    <div class="field">
+      <%= f.submit t('.sign_up'), class: 'btn btn-primary' %>
+    </div>
+  <% end %>
 
-  <div class="field">
-    <%= f.submit t('.sign_up'), class: 'btn btn-primary' %>
-  </div>
-<% end %>
+  <%= render 'devise/shared/links' %>
 
-<%= render 'devise/shared/links' %>
+ </div>
+</div>

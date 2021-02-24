@@ -3,38 +3,13 @@
     <div class="container">
 
       <p id="notice"><%= notice %></p>
-
-      <p>
-        <strong>Name:</strong>
-        <%= @course.name %>
-      </p>
-
       <p>
         <strong>Course category:</strong>
-        <%= @course.category %>
+        <%= @course_application.category %>
       </p>
 
-      <p>
-        <strong>Mobile Number:</strong>
-        <%= @course.description %>
-      </p>
-      <p>
-        <strong>Course Starts:</strong>
-        <%= @course.start_date %>
-      </p>
-
-      <p>
-        <strong>Course Ends:</strong>
-        <%= @course.course_ends %>
-      </p>
-
-      <p>
-        <strong>Course period:</strong>
-        <%= @course.period %>
-      </p>
-
-      <%= link_to 'Edit', edit_course_path(@course) %> |
-      <%= link_to 'Back', courses_path %>
+      <%= link_to 'Edit', edit_course_application_path(@course_application) %> |
+      <%= link_to 'Back', course_applications_path %>
     </div>
   </div>
 </div>

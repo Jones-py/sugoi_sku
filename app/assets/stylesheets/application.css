@@ -12,5 +12,6 @@
  *
  *= require toastr
  *= require_tree .
+ *= require bootstrap-datepicker
  *= require_self
  */

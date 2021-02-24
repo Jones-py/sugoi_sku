@@ -12,9 +12,24 @@
 //
 //= require rails-ujs
 //= require jquery
-//= require jquery_ujs
 //= require toastr
 //= require twitter/bootstrap
+//= require bootstrap
+//= require moment
+//= require bootstrap-datepicker
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+$ ( function () {
+  $ ( '.datepicker' ). datetimepicker ( {
+    format: "YYYY / MM / DD" ,
+    icons: {
+      previous: "fa fa-arrow-left" ,
+      next: "fa fa-arrow-right"
+    }
+  } );
+  } );
+  var date = $("#scheduleDate").datepicker({ dateFormat: 'dd,MM,yyyy' }).val();
+ $(document).ready(ready)
+$(document).on('turbolinks:load', ready)
