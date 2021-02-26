@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 module SugoiSku
   class Application < Rails::Application
     config.assets.paths << Rails.root.join("app", "assets", "img")
-    # Initialize configuration defaults for originally generated Rails version.
+    # config.autoload_paths = config.eager_load_paths.dup# Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
     # Settings in config/environments/* take precedence over those specified here.

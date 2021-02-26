@@ -1,0 +1,20 @@
+<%= form_with(model: aplication, local: true) do |form| %>
+  <% if aplication.errors.any? %>
+    <div id="error_explanation">
+      <h4><%= aplication.errors.count %> Errors Present.</h4>
+      <ul>
+      <% aplication.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :payment_method%>
+    <%= form.text_field :payment_method%>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

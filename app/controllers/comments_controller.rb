@@ -1,19 +1,21 @@
 class CommentsController < ApplicationController
- before_action :set_comment, only: [:show, :edit, :update, :destroy]
+ before_action :set_comment, only: [:show, :new, :edit, :update, :destroy]
   def index
-    @comments=Comment.all
-   end
+   @comment=Comment.all
+  end
 
   def new
-    @comment = Comment.new
-   end
+    @comment=Comment.new
+  end
+
+
 
   def create
-   @comment=Comment.new(comment_params)
-    @comment.course_id = params[:course_id]
-     @comment.save
-     redirect_to manual_path(@comment.course)
-  end
+    @comment=Comment.new(comment_params)
+      @comment.course_id = params[:course_id]
+       @comment.save
+       redirect_to course_path(@comment.course)
+    end
 
   def edit
   end
@@ -41,6 +43,6 @@ class CommentsController < ApplicationController
    @comment=Comment.find(params[:id])
   end
   def comment_params
-   params.require(:comment).permit(:content)
+   params.require(:comment).permit(:content, :id)
   end
 end

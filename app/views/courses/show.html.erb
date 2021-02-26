@@ -1,37 +1,29 @@
 <div class="row justify-content-center">
   <div class="col-3">
     <div class="container">
-
-      <p id="notice"><%= notice %></p>
-
       <p>
         <strong>Name:</strong>
-        <%= @course.name %>
+        <%=@course.name %>
       </p>
 
       <p>
         <strong>Course category:</strong>
-        <%= @course.category %>
+        <%=@course.category %>
       </p>
 
       <p>
-        <strong>Mobile Number:</strong>
-        <%= @course.description %>
-      </p>
-      <p>
-        <strong>Course Starts:</strong>
-        <%= @course.start_date %>
-      </p>
-
-      <p>
-        <strong>Course Ends:</strong>
-        <%= @course.course_ends %>
+        <strong>Course Description:</strong>
+        <%=@course.description %>
       </p>
 
       <p>
         <strong>Course period:</strong>
-        <%= @course.period %>
+        <%= @course.course_period %>
       </p>
+      
+      <h5>Comments (<%= @course.comments.size %>)</h5>
+        <%= render partial: 'courses/comment', collection: @course.comments.reverse %>
+        <%= render partial: 'comments/form' %>
 
       <%= link_to 'Edit', edit_course_path(@course) %> |
       <%= link_to 'Back', courses_path %>

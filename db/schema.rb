@@ -10,23 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_24_181351) do
+ActiveRecord::Schema.define(version: 2021_02_25_181608) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "aplications", force: :cascade do |t|
+    t.string "payment_method"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "course_id"
+    t.bigint "user_id"
+    t.index ["course_id"], name: "index_aplications_on_course_id"
+    t.index ["user_id"], name: "index_aplications_on_user_id"
+  end
 
   create_table "comments", force: :cascade do |t|
     t.text "content"
     t.bigint "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
     t.index ["course_id"], name: "index_comments_on_course_id"
-  end
-
-  create_table "course_applications", force: :cascade do |t|
-    t.string "payment_method"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "courses", force: :cascade do |t|
@@ -36,6 +42,8 @@ ActiveRecord::Schema.define(version: 2021_02_24_181351) do
     t.string "course_period"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_courses_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -62,5 +70,9 @@ ActiveRecord::Schema.define(version: 2021_02_24_181351) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "aplications", "courses"
+  add_foreign_key "aplications", "users"
   add_foreign_key "comments", "courses"
+  add_foreign_key "comments", "users"
+  add_foreign_key "courses", "users"
 end

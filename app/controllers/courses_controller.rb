@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
-  load_and_authorize_resource
-
+ before_action :set_course, only: [:show, :edit, :update, :destroy]
+ load_and_authorize_resource
   def index
     @courses=Course.all
   end
@@ -11,16 +11,18 @@ class CoursesController < ApplicationController
 
   def show
     @course=Course.find(params[:id])
+    @comment=Comment.new
+    @comment.course_id=@course.id
   end
 
   def create
-     @course=Course.new(course_params)
-     # @course.user_id=current_user.id
-     if @course.save
-       redirect_to courses_path, notice: "New Course!"
-     else
-       render :new
-     end
+   @course=Course.new(course_params)
+     @course.user_id=current_user.id
+       if @course.save
+         redirect_to courses_path, notice: "New Course!"
+       else
+        render :new
+      end
    end
 
   def edit
@@ -41,8 +43,11 @@ class CoursesController < ApplicationController
   end
 
   private
+  def set_course
+   @course=Course.find(params[:id])
+  end
 
   def course_params
-    params.require(:course).permit(:name,:category,:description,:course_period,:user_id, :id)
+    params.require(:course).permit(:name,:category,:description,:comment_id,:course_period,:user_id, :id)
   end
 end

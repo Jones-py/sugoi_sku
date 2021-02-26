@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
-
-
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  resources :courses
-  resources :course_applications
-  # devise_for :users, controllers: { registrations: 'registrations'}
+  resources  :courses
+  resources  :aplications
+  resources  :comments
+  resources  :courses do
+    resources :comments
+  end
+
   devise_for :users,:controllers => { :new_user_registration => "users/registrations#new"}
   root 'homes#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
 end

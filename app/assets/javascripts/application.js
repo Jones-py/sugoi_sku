@@ -17,6 +17,8 @@
 //= require bootstrap
 //= require moment
 //= require bootstrap-datepicker
+//= require semantic-ui/modal
+//= require semantic-ui/dropdown
 //= require activestorage
 //= require turbolinks
 //= require_tree .

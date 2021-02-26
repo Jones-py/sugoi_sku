@@ -19,20 +19,14 @@
   </div>
   <div class="field">
     <%= form.label :description%>
-    <%= form.text_field :description%>
+    <%= form.text_field :description, placeholder:"description"%>
   </div>
-  <div class="field">
-    <%= form.label :start_date%>
-    <%= form.text_field :start_date%>
-  </div>
-  <div class="field">
-    <%= form.label :course_ends%>
-    <%= form.text_field :course_ends%>
-  </div>
+
   <div class="field">
     <%= form.label :course_period%>
     <%= form.text_field :course_period%>
   </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

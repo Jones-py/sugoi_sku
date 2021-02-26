@@ -14,6 +14,7 @@ gem 'jquery-rails'
 gem 'toastr-rails'
 gem 'rails_admin', '~> 2.0'
 gem 'cancancan'
+gem 'semantic-ui-sass'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
