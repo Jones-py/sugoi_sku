@@ -114,7 +114,7 @@ hr{
   text-align: center;
   }
 .top-courses{
-  padding-top: 150px;
+  padding-top: 40px;
 }
 .sign{
   width: 300px;
@@ -136,4 +136,71 @@ hr{
   width: 200px;
   margin-left: 40%;
   padding-bottom: 110px;
+}
+.thumbnail{
+margin-bottom: 40%;
+height: 10%;
+width: 55%;
+}
+
+.instructor_img{
+  width: 70%;
+  height: 60%;
+
+
+
+}
+
+.order{
+  padding-top: 10px;
+  margin-left: 15%;
+  display: inline-table;
+  padding-bottom: 10%;
+
+}
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  display: inline-table;
+  margin: auto 10px;
+  text-align: center;
+}
+
+.title {
+  color: #11999E;
+  font-size: 14px;
+  text-indent: inherit;
+  
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #11999E;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+.message{width: 30%;
+         margin-left: 32%;
+
+}
+.fa{
+  margin:  auto 5px;
 }

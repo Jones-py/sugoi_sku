@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
+
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'admin' => 'admin#index'
   resources  :courses
   resources  :aplications
   resources  :comments
+  resources  :instructors
   resources  :courses do
     resources :comments
   end
