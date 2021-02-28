@@ -1,3 +1,6 @@
+<div class="top-courses">
+
+
 <div class="container">
 <h4>Course Panel</h4>
 
@@ -19,7 +22,7 @@
         <td><%= course.category %></td>
         <td><%= course.description %></td>
         <td><%= course.course_period %></td>
-        <td><%= link_to 'Show', course %></td>
+        <td><%= link_to 'Comment', course %></td>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>
         <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -29,3 +32,5 @@
 <br>
 <%= link_to 'New Registration form', new_course_path %>
 </div>
+</div>
+<a class="nav-link" href="#"><%=paginate @courses, class: "nav-link" %></a>

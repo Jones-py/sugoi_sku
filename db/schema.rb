@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_25_181608) do
+ActiveRecord::Schema.define(version: 2021_02_28_105331) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,9 +20,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_181608) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "course_id"
-    t.bigint "user_id"
     t.index ["course_id"], name: "index_aplications_on_course_id"
-    t.index ["user_id"], name: "index_aplications_on_user_id"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -30,20 +28,16 @@ ActiveRecord::Schema.define(version: 2021_02_25_181608) do
     t.bigint "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id"
     t.index ["course_id"], name: "index_comments_on_course_id"
-    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "courses", force: :cascade do |t|
-    t.string "name"
-    t.string "category"
-    t.text "description"
-    t.string "course_period"
+    t.string "name", null: false
+    t.string "category", null: false
+    t.text "description", null: false
+    t.string "course_period", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id"
-    t.index ["user_id"], name: "index_courses_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -58,11 +52,11 @@ ActiveRecord::Schema.define(version: 2021_02_25_181608) do
     t.string "unconfirmed_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "gender"
-    t.string "first_name"
-    t.string "last_name"
-    t.date "DOB"
-    t.integer "mobile_number"
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.datetime "date_of_birth"
+    t.boolean "is_female", default: false
+    t.bigint "mobile_number"
     t.boolean "superadmin_role", default: false
     t.boolean "instructor_role", default: false
     t.boolean "user_role", default: true
@@ -71,8 +65,5 @@ ActiveRecord::Schema.define(version: 2021_02_25_181608) do
   end
 
   add_foreign_key "aplications", "courses"
-  add_foreign_key "aplications", "users"
   add_foreign_key "comments", "courses"
-  add_foreign_key "comments", "users"
-  add_foreign_key "courses", "users"
 end

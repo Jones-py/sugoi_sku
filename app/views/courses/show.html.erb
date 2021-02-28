@@ -1,5 +1,5 @@
-<div class="row justify-content-center">
-  <div class="col-3">
+<div class="comment">
+  <div class="col-2">
     <div class="container">
       <p>
         <strong>Name:</strong>
@@ -20,11 +20,27 @@
         <strong>Course period:</strong>
         <%= @course.course_period %>
       </p>
-      
-      <h5>Comments (<%= @course.comments.size %>)</h5>
-        <%= render partial: 'courses/comment', collection: @course.comments.reverse %>
-        <%= render partial: 'comments/form' %>
 
+      <button class="btn btn-primary" type="button">
+        Comments <span class="badge"><%= @course.comments.size %></span>
+      </button>
+       <div class="ui card">
+         <div class="content">
+          <div class="header"><%=current_user.first_name %></div>
+          <div class="meta">
+            <span class="right floated time"></span>
+            <span class="category"></span>
+            </div>
+            <div class="description">
+              <p><%= render partial: 'courses/comment', collection: @course.comments.reverse %></p>
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="right floated author">
+            </div>
+          </div>
+        </div>
+       <%= render partial: 'comments/form' %><br>
       <%= link_to 'Edit', edit_course_path(@course) %> |
       <%= link_to 'Back', courses_path %>
     </div>

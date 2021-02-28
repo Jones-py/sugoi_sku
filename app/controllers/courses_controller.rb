@@ -1,8 +1,8 @@
 class CoursesController < ApplicationController
  before_action :set_course, only: [:show, :edit, :update, :destroy]
- load_and_authorize_resource
+ # load_and_authorize_resource
   def index
-    @courses=Course.all
+    @courses=Course.page(params[:page]).per(2)
   end
 
   def new
@@ -33,7 +33,7 @@ class CoursesController < ApplicationController
      if @course.update(course_params)
         redirect_to courses_path, notice: " Course updated!"
      else
-      render :edit
+       render :edit
      end
   end
 
@@ -48,6 +48,6 @@ class CoursesController < ApplicationController
   end
 
   def course_params
-    params.require(:course).permit(:name,:category,:description,:comment_id,:course_period,:user_id, :id)
+    params.require(:course).permit(:name,:category,:description,:course_period,:user_id, :id)
   end
 end

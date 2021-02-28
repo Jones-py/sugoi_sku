@@ -1,38 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title><%= content_for?(:title)? yield(:title): "SugoiSku" %></title>
-    <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag "application", :media => "all" %>
-    <script src="https://kit.fontawesome.com/d73c08515e.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-   <%= javascript_include_tag "application" %>
-</head>
-  <body>
-
-<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-      <span class="icon-bar"></span>
+ <html lang="en">
+  <head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title><%= content_for?(:title)? yield(:title): "SugoiSku" %></title>
+      <%= csrf_meta_tags %>
+      <%= stylesheet_link_tag "application", :media => "all" %>
+      <script src="https://kit.fontawesome.com/d73c08515e.js" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <%= javascript_include_tag "application" %>
+  </head>
+   <body>
+ <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
        <span class="icon-bar"></span>
-       <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
         </button>
-  <div class="navbar navbar-default navbar-static-top">
-        <a class="navbar-brand" href="#">SugoiSku</a>
-        <div class="navbar-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-nav">
-            <li><%= link_to 'Courses', courses_path %></li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "sign up", new_user_registration_path %></li>
-          </ul>
-          <ul class="nav navbar-right col-md-4">
-           <% if current_user %>
-           <li class="col-md-8 user-name"
-           <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 25)).html_safe, edit_user_registration_path, title: 'Edit Profile' %>
-          </li>
+
+    <div class="navbar navbar-default navbar-static-top">
+       <div class="container">
+           <a class="navbar-brand" href="#"><%= link_to 'SugoiSku', root_path, class: "navbar-brand" %></a>
+           <div class="navbar-collapse collapse navbar-responsive-collapse">
+             <ul class="nav navbar-nav">
+               <li class= "access"><%= link_to 'Courses', courses_path%></li>
+               <li><%= link_to "Apply", aplications_path, class: "access" %></li>
+
+                  <% if can? :manage, User %>
+             	    <li><%= link_to 'Admin Dashboard', admin_path, class: "nav navbar-nav" %></li>
+                <% end %>
+               </ul>
+
+             <ul class="nav navbar-right col-md-4">
+             <% if current_user %>
+             <li class="col-md-8 user-name"
+            <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.first_name, length: 25)).html_safe, edit_user_registration_path, title: 'Edit Profile' %>
+           </li>
            <li class="col-md-1"> </li>
            <li class="col-md-3 logout"><%= link_to('Logout', destroy_user_session_path,
           class: 'btn btn-xs btn-danger', title: 'Logout', :method => :delete) %></li>
@@ -44,18 +49,19 @@
           </ul>
         </div>
        </div>
-
-         <%=bootstrap_flash %>
-
-         <div class="flash">
+      </div>
+      <div class="flash">
+           <%=bootstrap_flash %>
           <%= yield %>
-       </div>
-
-        <div class="bottom-container">
-          <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
-          <a class="footer-link" href="https://twitter.com/">Twitter</a>
-          <a class="footer-link" href="https://www.appbrewery.co/">facebook</a>
-          <p class="name">© 2021 sugoi.com.</p>
         </div>
   </body>
+
+  <div class="bottom-container">
+      <footer class="footer">
+        <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
+        <a class="footer-link" href="https://twitter.com/">Twitter</a>
+        <a class="footer-link" href="https://www.appbrewery.co/">facebook</a>
+        <p class="name">© 2021 sugoi.com.</p>
+      </footer>
+    </div>
 </html>

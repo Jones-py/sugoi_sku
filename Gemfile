@@ -5,7 +5,8 @@ ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.5'
-
+gem 'kaminari', '~> 0.17.0'
+gem 'ransack'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -24,6 +25,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'twitter-bootstrap-rails', '~> 4.0'
 gem 'devise-bootstrap-views', '~> 1.1'
+gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'bootstrap-datepicker-rails'
 gem 'momentjs-rails'
