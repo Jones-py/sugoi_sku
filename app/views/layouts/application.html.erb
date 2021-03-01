@@ -13,6 +13,7 @@
        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
        <%= javascript_include_tag "application" %>
    </head>
     <body>
@@ -28,8 +29,10 @@
           <div class="navbar-collapse collapse navbar-responsive-collapse">
             <ul class="nav navbar-nav">
               <li class= "access"><%= link_to 'Courses', courses_path%></li>
+
               <li><%= link_to "Apply", aplications_path, class: "access" %></li>
                 <li><%= link_to "Course Instructors", instructors_path, class: "access" %></li>
+
                   <% if can? :manage, User %>
              	    <li><%= link_to 'Admin Dashboard', admin_path, class: "nav navbar-nav" %></li>
                 <% end %>
@@ -51,6 +54,12 @@
           </ul>
         </div>
        </div>
+      </div>
+      <div class="sidebar">
+        <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="#services"><i class="fa fa-fw fa-wrench"></i> Services</a>
+        <a href="#clients"><i class="fa fa-fw fa-user"></i> Clients</a>
+        <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
       </div>
       <div class="flash">
            <%=bootstrap_flash %>

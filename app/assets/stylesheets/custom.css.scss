@@ -43,6 +43,19 @@ html, body {
   height: 70%;
   text-align: center;
 }
+ .nav-link{
+   text-align: center;
+   color: #11999E;
+   font-weight: 700;
+   font-size: 1.2rem;
+ }
+
+.table-head{
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+
 
 .footer,.bottom-container {
   background-color: #f6f6f6;
@@ -115,6 +128,7 @@ hr{
   }
 .top-courses{
   padding-top: 40px;
+  margin-left: 10%;
 }
 .sign{
   width: 300px;
@@ -122,10 +136,10 @@ hr{
 }
 
 .comment{
-  width: 300px;
-  margin-left: 40%;
+  width: 100px;
+  margin-left: 30%;
   padding-bottom: 150px;
-  padding-top: 90px;
+  padding-top: 10px;
 }
 .comment_section{
   display: inline;
@@ -147,8 +161,11 @@ width: 55%;
   width: 70%;
   height: 60%;
 
+}
 
-
+.w3-sidebar{
+height: 100%;
+margin-bottom: 30%;
 }
 
 .order{
@@ -158,7 +175,11 @@ width: 55%;
   padding-bottom: 10%;
 
 }
-
+.top{
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -172,7 +193,7 @@ width: 55%;
   color: #11999E;
   font-size: 14px;
   text-indent: inherit;
-  
+
 }
 
 button {
@@ -203,4 +224,46 @@ button:hover, a:hover {
 }
 .fa{
   margin:  auto 5px;
+}
+/* Style the sidebar - fixed full height */
+.sidebar {
+  height: 70%;
+  width: 160px;
+  position: fixed;
+  margin-bottom: 40%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #11999E;
+  overflow-x: hidden;
+  margin-left: 2px;
+  margin-top: 4%;
+}
+
+
+
+/* Style sidebar links */
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  color:  white;
+  display: block;
+}
+
+/* Style links on mouse-over */
+.sidebar a:hover {
+  color: black;
+}
+
+/* Style the main content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+/* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }
