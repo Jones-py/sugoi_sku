@@ -5,13 +5,14 @@ html, body {
 }
 
 .fa-user{padding-top: 12px;
-         margin-left: 70%;
+         // margin-left: 70%;
 
 }
 .navbar{
   padding-top: 6px;
-  background-color: #28abb9;
+  background-color: #11999E;
   color: #fff;
+  height: 10%;
 
 }
 .navbar-link:focus, .navbar-link:hover{
@@ -55,7 +56,12 @@ html, body {
   font-size: 1.2rem;
 }
 
-
+// .nav{
+//
+//   display: inline-flex;
+//   margin-bottom: 23px;
+//   padding-bottom: 60px;
+// }
 
 .footer,.bottom-container {
   background-color: #f6f6f6;
@@ -145,6 +151,10 @@ hr{
   display: inline;
 
 }
+.apply{
+  margin-left: 30%;
+  width: 300px;
+}
 .page1{
   padding-top: 20px;
   width: 200px;
@@ -163,10 +173,6 @@ width: 55%;
 
 }
 
-.w3-sidebar{
-height: 100%;
-margin-bottom: 30%;
-}
 
 .order{
   padding-top: 10px;
@@ -194,6 +200,19 @@ margin-bottom: 30%;
   font-size: 14px;
   text-indent: inherit;
 
+}
+
+.new{
+  text-align: center;
+
+}
+
+.navbar-brand,.nav{
+   color: white;
+
+}
+.navbar li a, .navbar .navbar-brand {
+  color: #fff !important;
 }
 
 button {
@@ -234,7 +253,7 @@ button:hover, a:hover {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #11999E;
+  background-color: #28abb9;
   overflow-x: hidden;
   margin-left: 2px;
   margin-top: 4%;

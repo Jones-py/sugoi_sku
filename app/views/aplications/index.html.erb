@@ -1,22 +1,23 @@
-
-<h4>Application Form</h4>
-<table class="ui five column table">
-  <thead>
-    <tr>
-      <th>payment_method</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @aplications.each do |aplication| %>
+<div class="apply">
+  <h4>Application Form</h4>
+  <table class="ui five column table">
+    <thead>
       <tr>
-        <td><%=aplication.payment_method %></td>
-        <td><%= link_to 'Show', aplication %></td>
-        <td><%= link_to 'Edit', edit_course_path(aplication) %></td>
-        <td><%= link_to 'Destroy', aplication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>payment_method</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-<br>
-<%= link_to 'New Registration form', new_aplication_path %>
+    </thead>
+    <tbody>
+      <% @aplications.each do |aplication| %>
+        <tr>
+          <td><%=aplication.payment_method %></td>
+          <td><%= link_to 'Show', aplication %></td>
+          <td><%= link_to 'Edit', edit_course_path(aplication) %></td>
+          <td><%= link_to 'Destroy', aplication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <%= link_to 'New Registration form', new_aplication_path %>
+</div>

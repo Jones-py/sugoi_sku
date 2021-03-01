@@ -1,3 +1,4 @@
+<div class="apply">
 <%= form_with(model: aplication, local: true) do |form| %>
   <% if aplication.errors.any? %>
     <div id="error_explanation">
@@ -14,7 +15,9 @@
     <%= form.label :payment_method%>
     <%= form.text_field :payment_method%>
   </div>
+  <br>
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+</div>
