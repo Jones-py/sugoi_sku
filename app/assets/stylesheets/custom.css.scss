@@ -1,16 +1,23 @@
 html, body {
   height: 100%;
   margin: 0;
-  color: white;
+
 }
 
 .hwords{
   font-weight: 600;
   color:  #91091e;
 }
-.fa-user{padding-top: 12px;
-         // margin-left: 70%;
+.fa-user{padding-top: 15px;
+         margin-left: 70%;
 
+}
+
+.fa{
+  margin: auto 4px;
+}
+.fas{
+    margin: auto 8px;
 }
 .navbar{
   padding-top: 6px;
@@ -20,12 +27,12 @@ html, body {
 
 }
 .navbar-link:focus, .navbar-link:hover{
-  // background: #3071a9;
+  background: #3071a9;
   color: #fff;
 }
 
 .navbar-link:hover{
-  // background: #3071a9;
+  background: #3071a9;
   color: #fff;
 }
 .btn-danger:hover, .btn-danger:focus {
@@ -212,7 +219,7 @@ width: 55%;
 .title {
   color: #11999E;
   font-size: 14px;
-  text-indent: inherit;
+  // text-indent: inherit;
 
 }
 
@@ -260,15 +267,6 @@ button:hover, a:hover {
          margin-left: 32%;
 
 }
-// .fas{
-//   margin: auto 8px;
-//   padding-left: 7px;
-//   font-size: 1.1rem;
-// }
-//
-// .home{
-//     margin: auto 20px;
-// }
 /* Style the sidebar - fixed full height */
 .sidebar {
   height: 70%;
@@ -287,7 +285,7 @@ button:hover, a:hover {
 
 
 /* Style sidebar links */
-.sidebar a {
+.sidebar a  {
   padding: 6px 10px 6px 16px;
   text-decoration: none;
   font-size: 20px;

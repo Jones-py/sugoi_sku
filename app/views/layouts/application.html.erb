@@ -23,17 +23,17 @@
         <span class="icon-bar"></span>
         </button>
 
-  <div class="navbar navbar-default navbar-static-top">
-      <div class="container">
-          <a class="navbar-brand" href="#"><%= link_to 'SugoiSku', root_path, class: "navbar-brand" %></a>
-          <div class="navbar-collapse collapse navbar-responsive-collapse">
-            <ul class="nav navbar-nav">
-              <li class= "access"><%= link_to 'Courses', courses_path%></li>
+   <div class="navbar navbar-default navbar-static-top">
+       <div class="container">
+           <a class="navbar-brand" href="#"><%= link_to 'SugoiSku', root_path, class: "navbar-brand" %></a>
+           <div class="navbar-collapse collapse navbar-responsive-collapse">
+             <ul class="nav navbar-nav">
+               <li class= "access"><%= link_to 'Courses', courses_path%></li>
 
-                <li><%= link_to "Apply", aplications_path, class: "access" %></li>
-                <li><%= link_to "Course Instructors", instructors_path, class: "access" %></li>
+                 <li><%= link_to "Apply", aplications_path, class: "access" %></li>
+                 <li><%= link_to "Course Instructors", instructors_path, class: "access" %></li>
 
-                  <% if can? :manage, User %>
+                   <% if can? :manage, User %>
              	    <li><%= link_to 'Admin Dashboard', admin_path, class: "menu" %></li>
                 <% end %>
               </ul>
@@ -57,7 +57,7 @@
       </div>
       <div class="sidebar">
         <a href="#home"><%= link_to 'Home', root_path, class: "fas fa-home" %></a>
-        <a href="#services"><%= link_to 'Services', courses_path, class: "fas fa-car" %></a>
+        <a href="#services"><%= link_to 'Courses', courses_path, class: "fas fa-car" %></a>
         <a href="#clients"><%= link_to 'Instructors', instructors_path, class:"fas fa-address-card"%></a>
         <a href="#contact"><%= link_to 'Apply', aplications_path, class: "fas fa-fill" %></a>
       </div>
@@ -69,9 +69,11 @@
 
   <div class="bottom-container">
       <footer class="footer">
-        <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
-        <a class="footer-link" href="https://twitter.com/">Twitter</a>
-        <a class="footer-link" href="https://www.appbrewery.co/">facebook</a>
+        <i class="fa fa-linkedin-square" style="font-size:22px; color:#51c2d5"><a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a></i>
+        <i class="fa fa-twitter-square" style="font-size:22px; color:#51c2d5"><a class="footer-link" href="https://twitter.com/">Twitter</a></i>
+
+        <i class="fa fa-facebook-official" style="font-size:22px;color:#51c2d5"><a class="footer-link" href="https://www.appbrewery.co/">facebook</a></i>
+
         <p class="name">© 2021 sugoi.com.</p>
       </footer>
     </div>
