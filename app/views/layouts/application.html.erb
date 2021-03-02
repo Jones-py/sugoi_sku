@@ -43,12 +43,12 @@
              <li class="col-md-8 user-name"
             <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.first_name, length: 25)).html_safe, edit_user_registration_path, title: 'Edit Profile' %>
            </li>
-           <li class="col-md-1"> </li>
+           <li class="col-md-2"> </li>
            <li class="col-md-3 logout"><%= link_to('Logout', destroy_user_session_path,
-          class: 'btn btn-xs btn-danger', title: 'Logout', :method => :delete) %></li>
+           title: 'Logout', :method => :delete) %></li>
           <% else %>
           <li class="col-md-4 pull-right">
-          <%= link_to('Sign In', new_user_session_path, class: 'btn btn-primary', title: 'Sign In') %>
+          <%= link_to('Sign In', new_user_session_path, title: 'Sign In') %>
           </li>
           <% end %>
           </ul>
@@ -56,15 +56,15 @@
        </div>
       </div>
       <div class="sidebar">
-        <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
-        <a href="#services"><i class="fa fa-fw fa-wrench"></i> Services</a>
-        <a href="#clients"><i class="fa fa-fw fa-user"></i> Clients</a>
-        <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+        <a href="#home"><%= link_to 'Home', root_path, class: "fas fa-home" %></a>
+        <a href="#services"><%= link_to 'Services', courses_path, class: "fas fa-car" %></a>
+        <a href="#clients"><%= link_to 'Instructors', instructors_path, class:"fas fa-address-card"%></a>
+        <a href="#contact"><%= link_to 'Apply', aplications_path, class: "fas fa-fill" %></a>
       </div>
       <div class="flash">
-           <%=bootstrap_flash %>
+        <%=bootstrap_flash %>
+      </div>
           <%= yield %>
-        </div>
   </body>
 
   <div class="bottom-container">

@@ -4,24 +4,28 @@ html, body {
   color: white;
 }
 
+.hwords{
+  font-weight: 600;
+  color:  #91091e;
+}
 .fa-user{padding-top: 12px;
          // margin-left: 70%;
 
 }
 .navbar{
   padding-top: 6px;
-  background-color: #11999E;
+  background-color: #28abb9;
   color: #fff;
   height: 10%;
 
 }
 .navbar-link:focus, .navbar-link:hover{
-  background: #3071a9;
+  // background: #3071a9;
   color: #fff;
 }
 
 .navbar-link:hover{
-  background: #3071a9;
+  // background: #3071a9;
   color: #fff;
 }
 .btn-danger:hover, .btn-danger:focus {
@@ -51,18 +55,28 @@ html, body {
    font-size: 1.2rem;
  }
 
+.hello{
+  color: #11999E;
+}
+.welcome{
+  color: #91684a;
+  font-style: oblique;
+  font-size: 1.3rem;
+}
+
 .table-head{
   font-weight: 700;
   font-size: 1.2rem;
 }
 
-// .nav{
-//
-//   display: inline-flex;
-//   margin-bottom: 23px;
-//   padding-bottom: 60px;
-// }
-
+.flash{
+  margin-bottom: 1px;
+  position: absolute;
+  display: inline;
+  padding-left: 20px;
+  // margin:0px 35%;
+  margin-left: 20%
+}
 .footer,.bottom-container {
   background-color: #f6f6f6;
   width: 100%;
@@ -206,7 +220,12 @@ width: 55%;
   text-align: center;
 
 }
-
+.move{
+  margin-left: 41%;
+  width: 100%;
+  color: #11999E;
+  font-weight: 700;
+}
 .navbar-brand,.nav{
    color: white;
 
@@ -241,9 +260,15 @@ button:hover, a:hover {
          margin-left: 32%;
 
 }
-.fa{
-  margin:  auto 5px;
-}
+// .fas{
+//   margin: auto 8px;
+//   padding-left: 7px;
+//   font-size: 1.1rem;
+// }
+//
+// .home{
+//     margin: auto 20px;
+// }
 /* Style the sidebar - fixed full height */
 .sidebar {
   height: 70%;
@@ -263,9 +288,9 @@ button:hover, a:hover {
 
 /* Style sidebar links */
 .sidebar a {
-  padding: 6px 8px 6px 16px;
+  padding: 6px 10px 6px 16px;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 20px;
   color:  white;
   display: block;
 }
