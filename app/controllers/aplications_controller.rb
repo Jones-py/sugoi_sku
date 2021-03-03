@@ -1,14 +1,15 @@
 class AplicationsController < ApplicationController
   before_action :set_aplication, only: [:show, :edit, :update, :destroy]
-  load_and_authorize_resource
+  # load_and_authorize_resource
 
     def index
-      @aplications = Aplication.all
+      @aplications=Aplication.page(params[:page]).per(3)
     end
 
     def new
-     @aplication = Aplication.new
-    end
+       @aplication= Aplication.new
+       @courses = Course.all
+     end
 
     def show
 
@@ -18,7 +19,7 @@ class AplicationsController < ApplicationController
       @aplication = Aplication.new(aplication_params)
        @aplication.user_id = current_user.id
         if @aplication.save
-         redirect_to aplications_path, notice: "New Course application!"
+         redirect_to courses_path, notice: "Your application has been recorded!"
        else
          render :new
        end
@@ -47,6 +48,6 @@ class AplicationsController < ApplicationController
     end
 
     def aplication_params
-      params.require(:aplication).permit(:payment_method,:course_id,:user_id, :id)
+      params.require(:aplication).permit(:payment_method, :user_id, :id, :course_id)
     end
   end

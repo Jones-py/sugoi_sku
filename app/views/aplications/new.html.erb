@@ -1,5 +1,12 @@
-<div class="apply">
-  <h4 class='apply'>New application form</h4>
-  <p class='new'><%= render 'form', aplication: @aplication %></p>
-  <p class='new'><%= link_to 'Back', aplications_path %></p>
+<div class="message">
+  <div class="alert alert-info alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Info!</strong> Hello <%=current_user.first_name %>!
+    Please select the course you want to enroll in. If you not sure, please feel free to contact us for assistance.
+  </div>
+
+<div class="page1">
+  <!-- <h4 class='apply'>New application form</h4> -->
+  <p class='new'><%= render 'form', aplication: @aplication, class: 'click' %></p>
+  <p class='back'><%= link_to 'Return to Courses', courses_path, class: 'click' %></p>
 </div>

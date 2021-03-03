@@ -4,6 +4,11 @@ html, body {
 
 }
 
+.click{
+  color:  blue;
+  font-weight: 400;
+}
+
 .hwords{
   font-weight: 600;
   color:  #91091e;
@@ -58,8 +63,8 @@ html, body {
  .nav-link{
    text-align: center;
    color: #11999E;
-   font-weight: 700;
-   font-size: 1.2rem;
+   font-weight: 500;
+   font-size: 1.0rem;
  }
 
 .hello{
@@ -72,8 +77,11 @@ html, body {
 }
 
 .table-head{
-  font-weight: 700;
-  font-size: 1.2rem;
+  font-weight: 500;
+  font-size: 1.0rem;
+  // color: #1687a7!important;
+  color: #91684a!important;
+  column-fill: 20px;
 }
 
 .flash{
@@ -111,7 +119,7 @@ html, body {
   text-emphasis-style: filled;
   margin-left: 25%;
   margin-bottom: 100px;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
    }
 .skill-row{
   width: 50%;
@@ -175,6 +183,7 @@ hr{
 .apply{
   margin-left: 30%;
   width: 300px;
+  padding-bottom: 120px;
 }
 .page1{
   padding-top: 20px;
@@ -206,6 +215,7 @@ width: 55%;
   text-align: center;
   font-weight: 700;
   font-size: 1.3rem;
+  color:  #91091e;
 }
 
 .card {
@@ -222,6 +232,11 @@ width: 55%;
   // text-indent: inherit;
 
 }
+
+.back{
+    margin-left: 3%;
+}
+
 
 .new{
   text-align: center;

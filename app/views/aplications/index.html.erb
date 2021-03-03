@@ -3,21 +3,28 @@
   <table class="ui five column table">
     <thead>
       <tr>
-        <th>payment_method</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
+        <th>Payment method</th>
+          <th>Course name</th>
+           <th>Course Description</th>
+            <th>Course Period</th>
+            <th colspan="3"></th>
+          </tr>
+       </thead>
     <tbody>
+      <tr>
       <% @aplications.each do |aplication| %>
-        <tr>
-          <td><%=aplication.payment_method %></td>
-          <td><%= link_to 'Show', aplication %></td>
-          <td><%= link_to 'Edit', edit_course_path(aplication) %></td>
-          <td><%= link_to 'Destroy', aplication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
+      <td><%=aplication.payment_method %></td>
+      <td><%=aplication.course.name %></td>
+      <td><%=aplication.course.description %></td>
+      <td><%=aplication.course.course_period %></td>
+      <td><%= link_to 'Show', aplication %></td>
+      <td><%= link_to 'Edit', edit_course_path(aplication) %></td>
+      <td><%= link_to 'Destroy', aplication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
       <% end %>
     </tbody>
   </table>
   <br>
-  <%= link_to 'New Registration form', new_aplication_path %>
+  <%= link_to 'New Registration form', new_aplication_path, class: 'click' %>
+  <a class= "nav-link"><%=paginate @aplications %></a>
 </div>
