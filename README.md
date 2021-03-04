@@ -17,7 +17,6 @@ Simple dynamic web app
 - [ ] Password reset function
 - [ ] course list display function
   - [ ] Show number of courses
-  - [ ] Show number of
 - [ ] course post function
   - [ ] name, category, description, and duration is required
 - [ ] course edit function
