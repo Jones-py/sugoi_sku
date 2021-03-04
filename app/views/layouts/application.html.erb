@@ -28,11 +28,7 @@
            <a class="navbar-brand" href="#"><%= link_to 'SugoiSku', root_path, class: "navbar-brand" %></a>
            <div class="navbar-collapse collapse navbar-responsive-collapse">
              <ul class="nav navbar-nav">
-               <li class= "access"><%= link_to 'Courses', courses_path%></li>
-
-                 <li><%= link_to "Apply", aplications_path, class: "access" %></li>
-                 <li><%= link_to "Course Instructors", instructors_path, class: "access" %></li>
-
+              
                    <% if can? :manage, User %>
              	    <li><%= link_to 'Admin Dashboard', admin_path, class: "menu" %></li>
                 <% end %>
