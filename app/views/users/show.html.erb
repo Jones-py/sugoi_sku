@@ -1,5 +1,15 @@
-
-<div class="top-courses">
-  <h4><%= @user.first_name %></h4>
-  <h5><%= @user.email%></h5>
+<div class="profile">
+<div class="card text-center" style="width: 27rem;">
+    <div class="card-body">
+      <p class="card-title"><strong><%=@user.first_name%>'s Profile </strong></p>
+      <p class="card-subtitle mb-2 "><strong>Email:</strong><%= @user.email %></p>
+      <p class="card-subtitle mb-2 "><strong>Mobile number:</strong><%= @user.mobile_number %></p>
+      <p class="card-subtitle mb-2 ">Number of applications: <%= @user.aplications.count %></p>
+      <p>
+      <strong>Courses:</strong>
+      <%@user.aplications.each do |aplication| %>
+        [<%=aplication.course.name %>]
+        <%end %>
+    </p>
+  </div>
 </div>
