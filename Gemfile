@@ -11,6 +11,7 @@ gem 'ransack'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
+gem 'ransack'
 gem 'jquery-rails'
 gem 'toastr-rails'
 gem 'rails_admin', '~> 2.0'

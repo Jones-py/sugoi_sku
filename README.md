@@ -47,6 +47,10 @@ Simple dynamic web app
 ## Wireframe
 [Wireframe Link](https://docs.google.com/document/d/1uNSxoU56xIbRztiEP1dTLvfPA4ptXC51bslguBddIP8/edit)
 
+## Advanced Functions
+   * devise
+   * Comment function
+
 ## To be used Gem
   * carrierwave
   * mini_magick

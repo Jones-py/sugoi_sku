@@ -2,7 +2,8 @@ class CoursesController < ApplicationController
  before_action :set_course, only: [:show, :edit, :update, :destroy]
  # load_and_authorize_resource
   def index
-    @courses=Course.page(params[:page]).per(2)
+    @q=Course.ransack(params[:q])
+    @courses=@q.result(distinct: true).page(params[:page]).per(2)
   end
 
   def new

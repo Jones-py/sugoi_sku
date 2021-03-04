@@ -8,7 +8,22 @@ html, body {
   color:  blue;
   font-weight: 400;
 }
+.search-button {
+  background-color: #28abb9;
+  color: #fff;
+  font-size: inherit;
+  text-decoration: none;
+  margin: auto 15px;
+}
+.search-button:hover {
+  background-color: #fff;
+  color: #28abb9;
+}
 
+
+.search{
+  margin-left: 40%;
+}
 .hwords{
   font-weight: 600;
   color:  #91091e;
@@ -81,7 +96,7 @@ html, body {
   font-size: 1.0rem;
   // color: #1687a7!important;
   color: #91684a!important;
-  column-fill: 20px;
+  border: none;
 }
 
 .flash{
@@ -162,11 +177,16 @@ hr{
   text-align: center;
   }
 .top-courses{
-  padding-top: 40px;
+  padding-top: 30px;
   margin-left: 10%;
+  margin-bottom: 15%;
 }
 .sign{
   width: 300px;
+
+}
+.sort_link{
+  color: blue;
 
 }
 
