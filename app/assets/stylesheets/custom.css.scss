@@ -25,8 +25,9 @@ html, body {
   margin-left: 40%;
 }
 .hwords{
-  font-weight: 600;
+  font-weight: 500;
   color:  #91091e;
+  font-family: 'Shadows Into Light', cursive;
 }
 .fa-user{padding-top: 15px;
          margin-left: 70%;
@@ -80,7 +81,7 @@ html, body {
    color: #11999E;
    font-weight: 500;
    font-size: 1.0rem;
-   
+
  }
 
 .hello{
@@ -109,7 +110,7 @@ html, body {
   margin-left: 20%
 }
 .footer,.bottom-container {
-  background-color: #f6f6f6;
+  background-color: #eeeeee;
   width: 100%;
   height: 100px;
   position: fixed;
@@ -123,7 +124,8 @@ html, body {
 .footer-link{
   margin: 20px 10px auto 10px;
   text-decoration: none;
-  color: #11999E;
+  color: #23689b;
+  font-size: 1.2rem;
   line-height: 2;
   text-align: center;
 
@@ -136,6 +138,7 @@ html, body {
   margin-left: 25%;
   margin-bottom: 100px;
   padding-bottom: 100px;
+  font-family: 'Shadows Into Light', cursive;
    }
 .skill-row{
   width: 50%;
@@ -237,6 +240,7 @@ width: 55%;
   font-weight: 700;
   font-size: 1.3rem;
   color:  #91091e;
+  font-family: 'Shadows Into Light', cursive;
 }
 
 .card {
@@ -268,10 +272,12 @@ width: 55%;
   width: 100%;
   color: #11999E;
   font-weight: 700;
+  font-family: 'Shadows Into Light', cursive;
 }
 .navbar-brand,.nav{
    color: white;
-
+   font-family: 'Architects Daughter', cursive;
+   font-size: 1.4rem;
 }
 .navbar li a, .navbar .navbar-brand {
   color: #fff !important;
@@ -324,6 +330,7 @@ button:hover, a:hover {
   overflow-x: hidden;
   margin-left: 2px;
   margin-top: 4%;
+
 }
 
 
@@ -335,8 +342,12 @@ button:hover, a:hover {
   font-size: 20px;
   color:  white;
   display: block;
+
 }
 
+.bar{
+  font-family: 'Shadows Into Light', cursive;
+}
 /* Style links on mouse-over */
 .sidebar a:hover {
   color: black;

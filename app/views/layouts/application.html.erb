@@ -14,6 +14,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
        <%= javascript_include_tag "application" %>
    </head>
     <body>
@@ -25,7 +27,7 @@
 
    <div class="navbar navbar-default navbar-static-top">
        <div class="container">
-           <a class="navbar-brand" href="#"><%= link_to 'SugoiSku', root_path, class: "navbar-brand" %></a>
+           <a class="navbar-brand" href="#"><%= link_to 'Sugoi Driving School', root_path, class: "navbar-brand" %></a>
            <div class="navbar-collapse collapse navbar-responsive-collapse">
              <ul class="nav navbar-nav">
 
@@ -53,12 +55,12 @@
       </div>
       <div class="sidebar">
         <br>
-        <a href="#home"><%= link_to 'Home', root_path, class: "fas fa-home" %></a>
-        <a href="#services"><%= link_to 'Courses', courses_path, class: "fas fa-car" %></a>
-        <a href="#clients"><%= link_to 'Instructors', instructors_path, class:"fas fa-address-card"%></a>
-        <a href="#contact"><%= link_to 'Apply', new_aplication_path, class: "fas fa-fill" %></a>
+        <a class="bar"><%= link_to 'Home', root_path, class: "fas fa-home" %></a>
+        <a class="bar"><%= link_to 'Courses', courses_path, class: "fas fa-car" %></a>
+        <a class="bar"><%= link_to 'Instructors', instructors_path, class:"fas fa-address-card"%></a>
+        <a class="bar"><%= link_to 'Apply', new_aplication_path, class: "fas fa-fill" %></a>
        <% if user_signed_in? %>
-        <a href="#contact"><%= link_to 'Profile', user_path(current_user), class:"fas fa-address-card" %></a>
+        <a class="bar"><%= link_to 'Profile', user_path(current_user), class:"fas fa-address-card" %></a>
        <% end %>
 
       </div>
@@ -70,10 +72,10 @@
 
   <div class="bottom-container">
       <footer class="footer">
-        <i class="fa fa-linkedin-square" style="font-size:22px; color:#51c2d5"><a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a></i>
-        <i class="fa fa-twitter-square" style="font-size:22px; color:#51c2d5"><a class="footer-link" href="https://twitter.com/">Twitter</a></i>
+        <i class="fa fa-linkedin-square" style="font-size:22px; color:#23689b"><a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a></i>
+        <i class="fa fa-twitter-square" style="font-size:22px; color:#23689b"><a class="footer-link" href="https://twitter.com/">Twitter</a></i>
 
-        <i class="fa fa-facebook-official" style="font-size:22px;color:#51c2d5"><a class="footer-link" href="https://www.appbrewery.co/">facebook</a></i>
+        <i class="fa fa-facebook-official" style="font-size:22px;color:#23689b"><a class="footer-link" href="https://www.appbrewery.co/">facebook</a></i>
 
         <p class="name">© 2021 sugoi.com.</p>
       </footer>
