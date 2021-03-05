@@ -39,17 +39,15 @@
     <% end %>
   </tbody>
 </table>
-<div class="nav-link">
-  <%=paginate @courses  %>
-</div>
+<a class="move"><%=paginate @courses %></a><br>
+
 <%= link_to 'Apply here', new_aplication_path, class: 'click' %>
 <br>
 <% if can? :manage, User %>
  <%= link_to 'Create new Course', new_course_path, class: 'click' %>
 <% end %>
+
 </div>
-
-
 </div>
 
 
