@@ -28,7 +28,7 @@
            <a class="navbar-brand" href="#"><%= link_to 'SugoiSku', root_path, class: "navbar-brand" %></a>
            <div class="navbar-collapse collapse navbar-responsive-collapse">
              <ul class="nav navbar-nav">
-              
+
                    <% if can? :manage, User %>
              	    <li><%= link_to 'Admin Dashboard', admin_path, class: "menu" %></li>
                 <% end %>
@@ -40,11 +40,11 @@
             <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.first_name, length: 25)).html_safe, edit_user_registration_path, title: 'Edit Profile' %>
            </li>
            <li class="col-md-2"> </li>
-           <li class="col-md-3 logout"><%= link_to('Logout', destroy_user_session_path,
+           <li class="col-md-4 logout"><%= link_to('Logout', destroy_user_session_path, class:"btn btn-danger",
            title: 'Logout', :method => :delete) %></li>
           <% else %>
           <li class="col-md-4 pull-right">
-          <%= link_to('Sign In', new_user_session_path, title: 'Sign In') %>
+          <%= link_to('Sign In', new_user_session_path, class: "btn btn-primary", title: 'Sign In') %>
           </li>
           <% end %>
           </ul>
@@ -57,8 +57,9 @@
         <a href="#services"><%= link_to 'Courses', courses_path, class: "fas fa-car" %></a>
         <a href="#clients"><%= link_to 'Instructors', instructors_path, class:"fas fa-address-card"%></a>
         <a href="#contact"><%= link_to 'Apply', new_aplication_path, class: "fas fa-fill" %></a>
-        <a href="#contact"><%= link_to 'Profile', user_path(current_user.id), class:"fas fa-address-card" %></a>
-
+       <% if user_signed_in? %>
+        <a href="#contact"><%= link_to 'Profile', user_path(current_user), class:"fas fa-address-card" %></a>
+       <% end %>
 
       </div>
       <div class="flash">
