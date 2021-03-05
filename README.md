@@ -17,6 +17,8 @@ Simple dynamic web app
 - [ ] Password reset function
 - [ ] course list display function
   - [ ] Show number of courses
+  - [ ] Search for available courses via name and category
+- [ ] course pagination set to 3 courses
 - [ ] course post function
   - [ ] name, category, description, and duration is required
 - [ ] course edit function
