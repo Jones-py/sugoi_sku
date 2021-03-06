@@ -11,9 +11,12 @@
     </div>
   <% end %>
   <!-- <div class="page1"> -->
+
+
   <div class="field">
     <%= form.label :course %>
     <%= form.collection_select :course_id, Course.order(:name),:id,:name, required: true, class:'form-control' %>
+
   </div>
   <div class="field">
     <%= form.label :payment_method%>

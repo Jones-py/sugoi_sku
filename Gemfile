@@ -7,6 +7,7 @@ ruby '2.6.5'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.5'
 gem 'kaminari', '~> 0.17.0'
 gem 'ransack'
+gem 'rails_admin_rollincode', '~> 1.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server

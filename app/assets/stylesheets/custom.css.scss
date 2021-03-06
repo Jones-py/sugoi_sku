@@ -20,7 +20,6 @@ html, body {
   color: #28abb9;
 }
 
-
 .search{
   margin-left: 40%;
 }
@@ -29,8 +28,9 @@ html, body {
   color:  #91091e;
   font-family: 'Shadows Into Light', cursive;
 }
-.fa-user{padding-top: 15px;
-         margin-left: 70%;
+.fa-user{
+  padding-top: 15px;
+  margin-left: 70%;
 
 }
 
@@ -38,7 +38,7 @@ html, body {
   margin: auto 4px;
 }
 .fas{
-    margin: auto 8px;
+  margin: auto 8px;
 }
 .navbar{
   padding-top: 6px;
@@ -76,11 +76,11 @@ html, body {
   height: 70%;
   text-align: center;
 }
- .nav-link{
-   margin-left: 30%;
-   color: #11999E;
-   font-weight: 500;
-   font-size: 1.0rem;
+.nav-link{
+  margin-left: 30%;
+  color: #11999E;
+  font-weight: 500;
+  font-size: 1.0rem;
 
  }
 
@@ -96,7 +96,6 @@ html, body {
 .table-head{
   font-weight: 500;
   font-size: 1.0rem;
-  // color: #1687a7!important;
   color: #91684a!important;
   border: none;
 }
@@ -106,7 +105,6 @@ html, body {
   position: absolute;
   display: inline;
   padding-left: 20px;
-  // margin:0px 35%;
   margin-left: 20%
 }
 .footer,.bottom-container {
@@ -120,7 +118,6 @@ html, body {
   padding-top: 30px;
 }
 
-
 .footer-link{
   margin: 20px 10px auto 10px;
   text-decoration: none;
@@ -129,7 +126,7 @@ html, body {
   line-height: 2;
   text-align: center;
 
-   }
+}
 .Contact-Us{
   width: 50%;
   line-height: 2;
@@ -145,11 +142,12 @@ html, body {
   margin: 100px auto 100px auto;
   text-align: center;
   line-height: 2;
-   }
+  }
 
 .skills{
   text-align: center;
-   }
+
+  }
 
 hr{
   border: dotted brown 6px;
@@ -160,42 +158,43 @@ hr{
 .driving-image__img{
   border-radius: 50%;
   width: 40rem;
-  // margin-right: 40%;
-
   }
 .manu-image__img{
   float: left;
   border-radius: 50%;
   width: 20rem;
-   }
+
+  }
 .auto-image__img{
-   border-radius: 50%;
-   width: 20rem;
-   float: right;
-   }
+  border-radius: 50%;
+  width: 20rem;
+  float: right;
+
+  }
 .intro{
   width: 100%;
   border-radius: 50%;
   margin-right: 15%;
   padding-top: 40px;
   text-align: center;
+
   }
 .top-courses{
   padding-top: 30px;
   margin-left: 10%;
   margin-bottom: 15%;
-}
+ }
 .sign{
-  width: 300px;
+ width: 300px;
 
 }
 .sort_link{
-  color: blue;
+ color: blue;
 
 }
 
 .comment{
-  width: 100px;
+ width: 100px;
   margin-left: 30%;
   padding-bottom: 150px;
   padding-top: 10px;
@@ -227,7 +226,6 @@ width: 55%;
 
 }
 
-
 .order{
   padding-top: 10px;
   margin-left: 15%;
@@ -241,6 +239,7 @@ width: 55%;
   font-size: 1.3rem;
   color:  #91091e;
   font-family: 'Shadows Into Light', cursive;
+
 }
 
 .card {
@@ -254,33 +253,32 @@ width: 55%;
 .title {
   color: #11999E;
   font-size: 14px;
-  // text-indent: inherit;
 
 }
 
 .back{
-    margin-left: 3%;
+  margin-left: 3%;
 }
-
 
 .new{
   text-align: center;
 
 }
 .move{
-  margin-left: 41%;
-  width: 100%;
-  color: #11999E;
-  font-weight: 700;
-  font-family: 'Shadows Into Light', cursive;
+ margin-left: 41%;
+ width: 100%;
+ color: #11999E;
+ font-weight: 700;
+ font-family: 'Shadows Into Light', cursive;
+
 }
 .navbar-brand,.nav{
-   color: white;
-   font-family: 'Architects Daughter', cursive;
-   font-size: 1.4rem;
+ color: white;
+ font-family: 'Architects Daughter', cursive;
+ font-size: 1.4rem;
 }
 .navbar li a, .navbar .navbar-brand {
-  color: #fff !important;
+ color: #fff !important;
 }
 
 .profile{
@@ -317,7 +315,7 @@ button:hover, a:hover {
          margin-left: 32%;
 
 }
-/* Style the sidebar - fixed full height */
+
 .sidebar {
   height: 70%;
   width: 160px;
@@ -333,9 +331,6 @@ button:hover, a:hover {
 
 }
 
-
-
-/* Style sidebar links */
 .sidebar a  {
   padding: 6px 10px 6px 16px;
   text-decoration: none;
@@ -348,18 +343,16 @@ button:hover, a:hover {
 .bar{
   font-family: 'Shadows Into Light', cursive;
 }
-/* Style links on mouse-over */
+
 .sidebar a:hover {
   color: black;
 }
 
-/* Style the main content */
 .main {
-  margin-left: 160px; /* Same as the width of the sidenav */
+  margin-left: 160px;
   padding: 0px 10px;
 }
 
-/* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
