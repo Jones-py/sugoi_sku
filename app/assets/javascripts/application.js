@@ -15,23 +15,14 @@
 //= require toastr
 //= require twitter/bootstrap
 //= require bootstrap
-//= require moment
-//= require bootstrap-datepicker
 //= require semantic-ui/modal
 //= require semantic-ui/dropdown
 //= require activestorage
 //= require turbolinks
+//= require bootstrap-datepicker
 //= require_tree .
 
-$ ( function () {
-  $ ( '.datepicker' ). datetimepicker ( {
-    format: "YYYY / MM / DD" ,
-    icons: {
-      previous: "fa fa-arrow-left" ,
-      next: "fa fa-arrow-right"
-    }
-  } );
-  } );
-  var date = $("#scheduleDate").datepicker({ dateFormat: 'dd,MM,yyyy' }).val();
- $(document).ready(ready)
-$(document).on('turbolinks:load', ready)
+
+  $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });

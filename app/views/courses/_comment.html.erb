@@ -1,5 +1,7 @@
 
 <div class="comment_section">
-  <p><%=comment.content %></p>
+  <p><%=comment.content %></p><br>
    <p><%=time_ago_in_words(comment.created_at)%> ago</p>
+   <td><%= link_to 'Edit', edit_comment_path(comment), class: 'click' %></td>|
+   <td><%= link_to 'Remove', comment, class: 'click', method: :delete, data: { confirm: 'Are you sure?' } %></td>
 </div>

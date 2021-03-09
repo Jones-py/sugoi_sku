@@ -31,11 +31,17 @@ class CommentsController < ApplicationController
     end
   end
 
+  # def destroy
+  #   @comment.destroy
+  #   redirect_to course, notice:" comment Deleted!"
+  # end
   def destroy
     @comment.destroy
-    redirect_to comments_path, notice:" comment Deleted!"
+    respond_to do |format|
+      format.html { redirect_to courses_url, notice: 'Comment Removed.' }
+      format.json { head :no_content }
+    end
   end
-
   private
 
   def set_comment

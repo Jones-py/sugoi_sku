@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2021_03_02_140120) do
     t.datetime "updated_at", null: false
     t.string "first_name", null: false
     t.string "last_name", null: false
-    t.datetime "date_of_birth"
+    t.date "date_of_birth"
     t.boolean "is_female", default: false
     t.bigint "mobile_number"
     t.boolean "superadmin_role", default: false

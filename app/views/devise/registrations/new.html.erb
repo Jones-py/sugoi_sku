@@ -15,10 +15,10 @@
     <div class="form-group" ><%= f.check_box :is_female, {}, true %> <%= f.label :is_female, "Female"%></div>
     <div class="form-group"><%= f.check_box :is_female, {}, false %> <%= f.label :is_female, "Male"%></div>
 
+    <%=f.label :date_of_birth%>
     <div class="form-group">
-      <%= f.label :date_of_birth %>
-      <%= f.text_field :date_of_birth, autofocus: true, autocomplete: 'date_of_birth', class: 'form-control' %>
-    </div>
+    <%=f.text_field :date_of_birth, hide_label: true, class: 'datepicker' %>
+   </div>
 
     <div class="form-group">
       <%= f.label :mobile_number%>
