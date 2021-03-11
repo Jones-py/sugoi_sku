@@ -1,7 +1,7 @@
 <div class="message">
   <div class="alert alert-danger alert-dismissible">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    <strong>Warning!</strong> Hello <%=current_user.first_name %>! Please note that once you comment, you can not edit nor delete your comment
+    <strong>Warning!</strong> Hello <%=current_user.first_name %>! Please leave us your review of the course in the comment section below and please observe good ethics when commenting. Enjoy
   </div>
 </div>
 <div class="comment">
@@ -47,7 +47,9 @@
           </div>
         </div>
        <%= render partial: 'comments/form' %><br>
-      <%= link_to 'Edit', edit_course_path(@course), class: 'click' %> |
+       <% if can? :manage, User %>
+        <%= link_to 'Edit', edit_course_path(@course), class: 'click' %> |
+       <%end%>
       <%= link_to 'Back', courses_path, class: 'click' %>
     </div>
   </div>

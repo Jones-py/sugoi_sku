@@ -22,7 +22,7 @@ class CommentsController < ApplicationController
   def update
     respond_to do |format|
       if @comment.update(comment_params)
-        format.html { redirect_to comments_path, notice: 'comment was successfully updated.' }
+        format.html { redirect_to course_path(@comment.course), notice: 'comment was successfully updated.' }
         format.json { render :show, status: :ok, location: comments_path }
       else
         format.html { render :edit }
@@ -31,14 +31,11 @@ class CommentsController < ApplicationController
     end
   end
 
-  # def destroy
-  #   @comment.destroy
-  #   redirect_to course, notice:" comment Deleted!"
-  # end
+
   def destroy
     @comment.destroy
     respond_to do |format|
-      format.html { redirect_to courses_url, notice: 'Comment Removed.' }
+      format.html { redirect_to course_path(@comment.course), notice: 'Comment Removed.' }
       format.json { head :no_content }
     end
   end

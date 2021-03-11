@@ -29,7 +29,7 @@
         <td class="bar"><%= course.category %></td>
         <td class="bar"><%= course.description %></td>
         <td class="bar"><%= course.course_period %></td>
-        <td class="bar"><%= link_to 'Comment', course, class: 'click' %></td>
+        <td class="bar"><%= link_to 'comment', course, class: 'click' %></td>
         <td><%= link_to 'Apply', new_aplication_path, class: 'click' %></td>
         <% if can? :manage, User %>
         <td><%= link_to 'Edit', edit_course_path(course), class: 'click' %></td>

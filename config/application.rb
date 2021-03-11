@@ -8,8 +8,11 @@ Bundler.require(*Rails.groups)
 ENV['RAILS_ADMIN_THEME'] = 'rollincode'
 module SugoiSku
   class Application < Rails::Application
-    config.assets.paths << Rails.root.join("app", "assets", "img")
     config.load_defaults 5.2
+    config.assets.initialize_on_precompile = false
+    config.serve_static_assets = true
+
+    config.assets.paths << Rails.root.join("app", "assets", "img")
     config.generators do |g|
         g.test_framework :rspec,
           fixtures: true,

@@ -8,12 +8,13 @@ gem 'rails', '~> 5.2.4', '>= 5.2.4.5'
 gem 'kaminari', '~> 0.17.0'
 
 gem 'rails_admin_rollincode', '~> 1.0'
-# Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
+# Use postgresql as the database for Active Record
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 gem 'ransack'
 gem 'jquery-rails'
+
 gem 'toastr-rails'
 gem 'rails_admin', '~> 2.0'
 gem 'cancancan'
@@ -75,7 +76,7 @@ group :production do
 end
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
+  gem 'capybara', '>= 3.29.0'
   gem 'selenium-webdriver'
   gem 'webdrivers'
   # Easy installation and use of chromedriver to run system tests with Chrome

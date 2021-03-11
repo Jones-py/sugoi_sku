@@ -14,9 +14,14 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
-  config.before(:all) do
-  FactoryBot.reload
- end
+   config.before(:each) do |example|
+     if example.metadata[:type] == :system
+       driven_by :selenium, using: :headless_chrome, screen_size: [1400, 1400]  do |options|
+         options.add_argument('no-sandbox')
+       end
+     end
+   end
+ 
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
@@ -27,8 +32,9 @@ RSpec.configure do |config|
     #     be_bigger_than(2).and_smaller_than(4).description
     #     # => "be bigger than 2 and smaller than 4"
     # ...rather than:
-    #     # => "be bigger than 2"
-    expectations.include_chain_clauses_in_custom_matcher_descriptions = true
+
+  config.filter_run_when_matching :focus
+  expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
 
   # rspec-mocks config goes here. You can use an alternate test double

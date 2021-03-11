@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  has_many :comments
-  has_many :courses
+  has_many :comments, dependent: :destroy
+  has_many :courses, dependent: :destroy
   has_many :aplications
 
   validates :first_name,  presence: true, length: { maximum: 200 }
@@ -9,7 +9,7 @@ class User < ApplicationRecord
   validates_numericality_of :mobile_number, :only_integer =>true,
                             :greater_than =>0
 
-  validates :date_of_birth,  presence: true
+  # validates :date_of_birth,  presence: true
 
 
   devise :database_authenticatable, :registerable,

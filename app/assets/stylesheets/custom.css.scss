@@ -3,7 +3,12 @@ html, body {
   margin: 0;
 
 }
-
+.commento{
+  width: 40%;
+}
+.comment-btn{
+  // margin-left: 5%;
+}
 .click{
   color:  blue;
   font-weight: 400;
@@ -255,7 +260,13 @@ width: 55%;
   font-size: 14px;
 
 }
-
+.comment-display{
+  margin-left: 20%;
+  width: 60%;
+  color: #11999E;
+  font-weight: 700;
+  font-family: 'Shadows Into Light', cursive;
+}
 .back{
   margin-left: 3%;
 }

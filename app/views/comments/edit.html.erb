@@ -1,3 +1,4 @@
-<%= render 'form', comment: @comment %>
-<%= link_to 'Show', @comment %> |
-<%= link_to 'Back', comments_path %>
+<div class="move">
+  <%= render 'form', comment: @comment %>
+  <%= link_to 'Back', course_path(@comment.course) %>
+</div>

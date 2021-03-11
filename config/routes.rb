@@ -6,15 +6,15 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'admin' => 'admin#index'
 
-  resource  :user
+  resource   :user
   resources  :courses
   resources  :aplications
   resources  :comments
   resources  :instructors
-  resources  :courses do
-    resources :comments
-  end
 
+  resources :courses, only: [:index, :show, :new, :create] do
+   resources :comments, only: [:create, :destroy]
+  end
   # devise_for :users,:controllers => { :new_user_registration => "users/registrations#new"}
 
   root 'homes#index'
