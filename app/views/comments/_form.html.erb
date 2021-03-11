@@ -1,4 +1,3 @@
-
 <div class="post">
 <h5 class="bar">Post a Comment</h5>
 <%=form_for [@course, @comment] do |f| %>
@@ -7,6 +6,9 @@
   <div class="commento">
     <%= f.text_area :content, class: "form-control", placeholder: "Your comment*", rows: 6 %>
   </div>
+  <div class="field">
+      <%= f.hidden_field :user_id, value: current_user.id %>
+    </div>
 </div>
     <%=f.submit "Post comment",class: "btn btn-primary"%>
  <% end %>

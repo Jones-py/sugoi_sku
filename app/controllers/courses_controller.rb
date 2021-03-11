@@ -12,7 +12,7 @@ class CoursesController < ApplicationController
 
   def show
     @course=Course.find(params[:id])
-    @comment=Comment.new
+    @comment= Comment.new
     @comment.course_id=@course.id
   end
 

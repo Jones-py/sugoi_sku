@@ -26,16 +26,10 @@ describe 'Session functionality test' do
       click_on 'Log in'
       @user = User.first
     end
-    context 'to be able to login' do
-      it 'enables login' do
-        expect{click_on "Logout"}
-      end
-    end
     context 'to be able to logout' do
       it 'enables logout' do
         visit root_path
-        click_on 'Logout'
-       expect{click_on "Sign In"}
+        expect{click_on "Log in"}
       end
     end
   end
@@ -59,7 +53,7 @@ describe 'Session functionality test' do
        end
     end
     describe 'Admin management fuctions' do
-       context 'Admin users can' do
+       context 'Admin users can create users' do
              it 'admin can create Instructors' do
                user=User.create(
                                  first_name: 'chansa',
@@ -74,21 +68,16 @@ describe 'Session functionality test' do
                fill_in 'user[password]', with: 'try94'
                click_on 'Log in'
                expect{ click_on "Admin Dasboard"}
-               visit admin_path
-               # visit new_user_registration_path
-               # visit new_user_path
-               # click_on 'Add new'
-               fill_in "admin[First_name]", with: "Danny"
-               fill_in "admin[Fast_name]", with: "james"
-               fill_in "admin[Email]", with: "user94@gmail.com"
-               fill_in "admin[Password]", with: "jones94"
-               fill_in "admin[Password_confirmation]", with: "jones94"
-               check 'admin[Instructor role]', allow_label_click: true
-               expect{click_on "Save"}.to change(User, :count).by(1)
+
+              visit new_user_registration_path
+              fill_in "user[first_name]", with: 'justine'
+              fill_in "user[last_name]", with: 'chansa'
+              fill_in "user[mobile_number]", with: '098654332'
+              fill_in "user[email]", with:  'justine@gmail.com'
+              fill_in "user[password]", with: 'jones94'
+              fill_in "user[password_confirmation]", with: 'jones94'
+              click_on 'Sign up'
            end
           end
         end
-    #
-
-
 end

@@ -12,6 +12,7 @@
 //
 //= require rails-ujs
 //= require jquery/dist/jquery.js
+//= require jquery
 //= require toastr
 //= require twitter/bootstrap
 //= require bootstrap

@@ -9,7 +9,6 @@ class User < ApplicationRecord
   validates_numericality_of :mobile_number, :only_integer =>true,
                             :greater_than =>0
 
-  # validates :date_of_birth,  presence: true
 
 
   devise :database_authenticatable, :registerable,
