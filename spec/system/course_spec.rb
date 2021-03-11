@@ -7,19 +7,23 @@ RSpec.describe Course, type: :system do
     end
    end
   end
-  describe 'course display function'  do
-    context 'If the transition to the list screen'  do
-      it 'already created course list is displayed' do
-        visit courses_path
-        click_on "Create new Course"
-        fill_in "name", with: "Testing"
-        fill_in "description", with: "will focus on reversing"
-        select  'manual'
-        fill_in "course_period", with: "4 weeks"
-        click_on "Create Course"
-        visit courses_path
-        expect(page).to have_content "Testing"
-        expect(page).to have_content "4 weeks"
+describe 'Create Courses' do
+  before do
+    User.create(
+            email: 'jona@gmail.com',
+            password: 'jones94',
+            password_confirmation: 'jones94',
+            superadmin_role: 'true')
+        visit new_user_session_path
+        fill_in "user[email]", with: 'jona@gmail.com'
+        fill_in "user[password]", with: "jones94"
+        click_on 'Log in'
+        @user = User.first
+      end
+      context 'Admin user can create courses' do
+        it 'create courses' do
+          visit courses_path
+          expect{click_on "Create new Course"}
       end
     end
   end

@@ -1,15 +1,20 @@
 require 'rails_helper'
-
 RSpec.describe Comment, type: :system do
-it "creates a comment successfully with valid information" do
-  fill_in 'body', with: "Test message"
-  expect { click_button "Submit" }.to change(Comment, :count).by(1)
-  expect(page).to have_selector("textarea", visible: "Test message")
-  end
+  describe 'Users can post comments' do
+      context 'when you login' do
+          it 'users can post comments' do
+              user=User.create(
+                               email: 'sample@me.com',
+                               password: 'password',
+                               password_confirmation: 'password')
+             visit new_user_session_path
+             fill_in 'user[email]', with: 'sample@me.com'
+             fill_in 'user[password]', with: 'password'
+             click_on 'Log in'
+             visit new_comment_path
+               expect{click_on "Post comment"}
+          end
+        end
+      end
+
 end
-it "shows comment of the user" do
-  visit hotel_path hotel
-  fill_in 'body', with: "comment1"
-  click_button "Submit"
-  expect(page).to have_content("comment1")
-end  

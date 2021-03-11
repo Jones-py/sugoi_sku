@@ -17,23 +17,31 @@ describe 'Sign_up users function' do
 end
 describe 'Session functionality test' do
     before do
-      User.create(email: 'jona@gmail.com',
+      User.create(
+                  email: 'jona@gmail.com',
                   password: 'jones94',
-                  password_confirmation: 'jones94')
+                  password_confirmation: 'jones94',
+                  superadmin_role: 'true')
       visit new_user_session_path
       fill_in "user[email]", with: 'jona@gmail.com'
       fill_in "user[password]", with: "jones94"
       click_on 'Log in'
       @user = User.first
     end
+    context 'Admin user can create courses' do
+      it 'create courses' do
+        visit courses_path
+        expect{click_on "Create new Course"}
+        end
+      end
     context 'to be able to logout' do
       it 'enables logout' do
-        visit root_path
-        expect{click_on "Log in"}
-      end
+      visit root_path
+      expect{click_on "Log in"}
     end
+   end
   end
-  describe 'Admin management fuctions' do
+describe 'Admin management fuctions' do
        context 'Admin users should access the Admin Dasboard ' do
             it 'admin_user can access Admin Dasboard' do
           user=User.create(first_name: 'admin',
@@ -80,4 +88,5 @@ describe 'Session functionality test' do
            end
           end
         end
-end
+
+    end
