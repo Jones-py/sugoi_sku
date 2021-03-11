@@ -4,9 +4,9 @@
   <p><%=comment.content %></p>
    <p class="click"><%=time_ago_in_words(comment.created_at)%> ago</p>
    <br>
-
-   <i style='font-size:24px; color:#23689b'><%= link_to '', edit_comment_path(comment),class:'far fa-edit' %></i>|
-   <i style='font-size:24px; color:red'><%= link_to '', comment, class: "fas fa-trash-alt", method: :delete, data: { confirm: 'Are you sure?' } %>
+   <% if current_user %>
+     <i style='font-size:24px; color:#23689b'><%= link_to '', edit_comment_path(comment),class:'far fa-edit' %></i>|
+     <i style='font-size:24px; color:red'><%= link_to '', comment, class: "fas fa-trash-alt", method: :delete, data: { confirm: 'Are you sure?' } %>
    </i>
-  
+   <% end %>
 </div>
