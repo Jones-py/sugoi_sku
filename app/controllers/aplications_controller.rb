@@ -1,6 +1,6 @@
 class AplicationsController < ApplicationController
   before_action :set_aplication, only: [:show, :edit, :update, :destroy]
-  # load_and_authorize_resource
+  before_action :superadmin_role_only, except: [:show, :new,:create]
 
     def index
       @aplications=Aplication.page(params[:page]).per(3)
@@ -43,6 +43,12 @@ class AplicationsController < ApplicationController
     end
 
     private
+    def superadmin_role_only
+       unless current_user.superadmin_role?
+         redirect_to courses_path, :notice => "Access denied! You need admin priviledges."
+       end
+     end
+
     def set_aplication
      @aplication = Aplication.find(params[:id])
     end

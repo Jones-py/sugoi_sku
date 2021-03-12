@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
  before_action :set_comment, only: [:show, :new, :edit, :update, :destroy]
+ before_action :superadmin_role_only, except: [:show, :new, :edit, :update]
+
   def index
    @comments=Comment.all
   end
@@ -40,6 +42,11 @@ class CommentsController < ApplicationController
     end
   end
   private
+  def superadmin_role_only
+     unless current_user.superadmin_role?
+       redirect_to courses_path, :notice => "Access denied! You need admin priviledges."
+     end
+   end
 
   def set_comment
    @comment=Comment.find(params[:id])

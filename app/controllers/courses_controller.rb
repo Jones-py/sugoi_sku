@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
  before_action :set_course, only: [:show, :edit, :update, :destroy]
- # load_and_authorize_resource
+ before_action :superadmin_role_only, except:[:show, :index]
   def index
     @q=Course.ransack(params[:q])
     @courses=@q.result(distinct: true).page(params[:page]).per(2)
@@ -44,6 +44,12 @@ class CoursesController < ApplicationController
   end
 
   private
+  def superadmin_role_only
+     unless current_user.superadmin_role?
+       redirect_to courses_path, :notice => "Access denied! You need admin priviledges."
+     end
+   end
+
   def set_course
    @course=Course.find(params[:id])
   end

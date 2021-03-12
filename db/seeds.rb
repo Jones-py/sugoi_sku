@@ -9,5 +9,4 @@
                       :password_confirmation => "jones94#{t}",
                       :superadmin_role => 'true'
 
-
 end

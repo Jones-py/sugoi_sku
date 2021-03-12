@@ -16,12 +16,17 @@
   <div class="field">
     <%= form.label :course %>
     <%= form.collection_select :course_id, Course.order(:name),:id,:name, required: true, class:'form-control' %>
-
   </div>
+
+
   <div class="field">
     <%= form.label :payment_method%>
     <%= form.select :payment_method, ['payment method', 'mobile money', 'Bank transfer','Cash payment'], class:'form-control'%>
   </div>
+
+  <div class="field" ><%= form.check_box :is_approved, {}, true %> <%= form.label :is_approved, "Approved"%></div>
+  <div class="field"><%= form.check_box :is_approved, {}, false %> <%= form.label :is_approved, "Pending"%></div>
+
   <br>
   <div class="actions">
     <%= form.submit class: "btn btn-primary"  %>

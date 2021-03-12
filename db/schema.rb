@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_02_140120) do
+ActiveRecord::Schema.define(version: 2021_03_11_213642) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2021_03_02_140120) do
     t.datetime "updated_at", null: false
     t.bigint "course_id"
     t.bigint "user_id"
+    t.boolean "is_approved", default: false
     t.index ["course_id"], name: "index_aplications_on_course_id"
     t.index ["user_id"], name: "index_aplications_on_user_id"
   end

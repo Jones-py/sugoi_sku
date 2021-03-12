@@ -1,8 +1,8 @@
 require 'rails_helper'
-RSpec.describe Comment, type: :system do
-  describe 'Users can post comments' do
-      context 'when you login' do
-          it 'users can post comments' do
+RSpec.describe Aplication, type: :system do
+  describe 'should be able to apply for a course' do
+      context 'User can apply for a course' do
+          it 'users can apply for a course' do
               user=User.create(
                                email: 'sample@me.com',
                                password: 'password',
