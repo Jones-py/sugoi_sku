@@ -4,7 +4,7 @@ class CreateCourses < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :category
       t.text :description
-      t.string :course_period
+      t.integer :course_period
       t.timestamps
     end
   end
